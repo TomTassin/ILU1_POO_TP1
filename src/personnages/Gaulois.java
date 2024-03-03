@@ -19,7 +19,7 @@ public class Gaulois {
 	}
 
 	public void parler(String texte) {
-		System.out.println(prendreParole() + "« " + texte + "»");
+		System.out.println(prendreParole() + "<< " + texte + ">>");
 	}
 
 	public String prendreParole() {
