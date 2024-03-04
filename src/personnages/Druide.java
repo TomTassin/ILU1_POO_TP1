@@ -20,7 +20,11 @@ public class Druide {
 		return nom;
 	}
 
-	private void parler(String texte) {
+	public int getForcePotion() {
+		return forcePotion;
+	}
+
+	public void parler(String texte) {
 		System.out.println(prendreParole() + "<< " + texte + ">>");
 
 	}
@@ -40,6 +44,15 @@ public class Druide {
 			parler( "Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force "+forcePotion);
 		}
 	}
+	
+	public void booster(Gaulois gaulois) {
+		if (gaulois.getNom()=="Obélix") {
+			System.out.println(prendreParole()+"Non, Obélix !... Tu n’auras pas de potion magique !");
+		} else {
+			gaulois.boirePotion(forcePotion);
+		}
+	}
+	
 	public static void main(String[] args) {
 		Druide panoramix= new Druide("Panoramix",5,10);
 		panoramix.preparerPotion();
